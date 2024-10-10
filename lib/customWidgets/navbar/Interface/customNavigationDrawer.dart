@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const Color kHeaderBackgroundColor = Color(0xFFF3E5F5);
+const Color kHeaderBackgroundColor = Color(0xFFD1C4E9);
 const Color kIconColor = Colors.grey;
 const Color kTextColor = Colors.black;
 const Color kSubtitleColor = Colors.black54;
