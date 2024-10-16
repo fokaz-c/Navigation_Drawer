@@ -11,7 +11,7 @@ class UserDataService {
 
     try {
       DocumentSnapshot userDoc = await firebaseProvider.firebaseFirestore!
-          .collection('User') // Ensure the collection name is "User"
+          .collection('User')
           .doc(userId)
           .get();
 
