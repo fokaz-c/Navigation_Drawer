@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Interface/navigationdrawer_constants.dart';
-import '../Interface/CustomNavigationDrawer.dart'; // Import your constants file
+import '../Interface/CustomNavigationDrawer.dart';
 
 class StudentNavbar implements CustomNavigationDrawer {
   final String userRole;
