@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Interface/customNavigationDrawer.dart';
-import '../Interface/navigationDrawer.dart';
+import '../Interface/navigationdrawer_constants.dart';
+import '../Interface/CustomNavigationDrawer.dart';
 
 class GuestNavbar implements CustomNavigationDrawer {
   @override
@@ -15,9 +15,7 @@ class GuestNavbar implements CustomNavigationDrawer {
             leading: const Icon(Icons.login, color: kIconColor, size: kListTileIconSize),
             title: const Text('Login'),
             onTap: () {
-              // Navigate to login page
               Navigator.pop(context);
-              // Add navigation to login page here
             },
           ),
           ListTile(
@@ -25,9 +23,7 @@ class GuestNavbar implements CustomNavigationDrawer {
             leading: const Icon(Icons.app_registration, color: kIconColor, size: kListTileIconSize),
             title: const Text('Register'),
             onTap: () {
-              // Navigate to registration page
               Navigator.pop(context);
-              // Add navigation to registration page here
             },
           ),
           ListTile(
@@ -35,9 +31,7 @@ class GuestNavbar implements CustomNavigationDrawer {
             leading: const Icon(Icons.info, color: kIconColor, size: kListTileIconSize),
             title: const Text('About Us'),
             onTap: () {
-              // Navigate to about page
               Navigator.pop(context);
-              // Add navigation to about page here
             },
           ),
           ListTile(
@@ -45,9 +39,7 @@ class GuestNavbar implements CustomNavigationDrawer {
             leading: const Icon(Icons.contact_support, color: kIconColor, size: kListTileIconSize),
             title: const Text('Contact'),
             onTap: () {
-              // Navigate to contact page
               Navigator.pop(context);
-              // Add navigation to contact page here
             },
           ),
         ],

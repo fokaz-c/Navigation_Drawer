@@ -3,7 +3,7 @@ import 'package:flutter_application_1/providers/firebaseProvider.dart';
 import 'package:flutter_application_1/services/UserDataService.dart';
 import 'package:provider/provider.dart';
 import 'customWidgets/navbar/Factory/navbar_factory.dart';
-import 'customWidgets/navbar/Interface/navigationDrawer.dart';
+import 'customWidgets/navbar/Interface/CustomNavigationDrawer.dart';
 import 'models/User.dart';
 
 void main() async {

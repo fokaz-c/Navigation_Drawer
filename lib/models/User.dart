@@ -1,6 +1,6 @@
 class User {
   final String id;
-  final String role; // Consider changing this to an enum if you have fixed roles
+  final String role;
   final String institution;
   final bool readyForHire;
   final String? profilePictureUrl;
@@ -43,7 +43,4 @@ class User {
     };
   }
 
-  String get displayProfilePictureUrl {
-    return profilePictureUrl ?? 'assets/default_profile.png'; // Placeholder URL
-  }
 }

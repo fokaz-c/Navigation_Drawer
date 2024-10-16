@@ -22,7 +22,6 @@ class UserDataService {
 
       Map<String, dynamic> userData = userDoc.data() as Map<String, dynamic>;
 
-      // Fetch profile picture URL
       String? profilePictureUrl = await _getProfilePictureUrl(userId, firebaseProvider);
 
       userData['profilePictureUrl'] = profilePictureUrl;

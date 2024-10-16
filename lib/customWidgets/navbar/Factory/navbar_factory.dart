@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../models/User.dart';
 import '../Implementations/studentNavbar.dart';
 import '../Implementations/guestNavbar.dart';
-import '../Interface/navigationDrawer.dart';
+import '../Interface/CustomNavigationDrawer.dart';
 
 class NavigationDrawerFactory {
   static Future<CustomNavigationDrawer> createNavigationDrawer(User user) {
@@ -12,7 +12,7 @@ class NavigationDrawerFactory {
           userRole: user.role,
           institution: user.institution,
           initialReadyForHire: user.readyForHire,
-          profilePicture: user.profilePictureUrl, // Pass the profile picture URL here
+          profilePicture: user.profilePictureUrl,
         ));
       default:
         return Future.value(GuestNavbar());
