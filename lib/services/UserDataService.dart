@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import '../models/User.dart';
 import '../providers/firebaseProvider.dart';
 
@@ -11,7 +10,7 @@ class UserDataService {
 
     try {
       DocumentSnapshot userDoc = await firebaseProvider.firebaseFirestore!
-          .collection('User') // Ensure the collection name is "User"
+          .collection('User')
           .doc(userId)
           .get();
 
