@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../Interface/navigationdrawer_constants.dart';
-import '../Interface/CustomNavigationDrawer.dart'; // Import your constants file
+import '../Interface/CustomNavigationDrawer.dart';
 
 class StudentNavbar implements CustomNavigationDrawer {
   final String userRole;
   final String institution;
-  final String? profilePicture; // Add profilePicture here
+  final String? profilePicture;
   final ValueNotifier<bool> readyForHire;
 
   StudentNavbar({
     required this.userRole,
     required this.institution,
-    this.profilePicture, // Accept it in the constructor
+    this.profilePicture,
     bool initialReadyForHire = false,
   }) : readyForHire = ValueNotifier(initialReadyForHire);
 
