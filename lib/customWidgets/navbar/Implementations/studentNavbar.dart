@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/customWidgets/navbar/Interface/navigationDrawer.dart';
-import 'Interface/customNavigationDrawer.dart';
+
+import '../Interface/navigationdrawer_constants.dart';
+import '../Interface/CustomNavigationDrawer.dart';
 
 class StudentNavbar implements CustomNavigationDrawer {
   final String userRole;
   final String institution;
+  final String? profilePicture;
   final ValueNotifier<bool> readyForHire;
 
   StudentNavbar({
     required this.userRole,
     required this.institution,
-    bool initialReadyForHire = false
+    this.profilePicture,
+    bool initialReadyForHire = false,
   }) : readyForHire = ValueNotifier(initialReadyForHire);
 
   @override
@@ -100,7 +103,17 @@ class StudentNavbar implements CustomNavigationDrawer {
                   shape: BoxShape.circle,
                   color: Colors.white,
                 ),
-                child: Icon(Icons.person, color: kIconColor, size: kAvatarSize * 0.6),
+                child:
+                profilePicture != null
+                    ? ClipOval(
+                  child: Image.network(
+                    profilePicture!,
+                    fit: BoxFit.cover,
+                    width: kAvatarSize,
+                    height: kAvatarSize,
+                  ),
+                )
+                    : Icon(Icons.person, color: kIconColor, size: kAvatarSize * 0.6),
               ),
               const SizedBox(height: 8),
               Text(
